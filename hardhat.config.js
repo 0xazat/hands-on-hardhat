@@ -18,6 +18,8 @@ task("accounts", "Prints the list of accounts", async (taskArgs, hre) => {
 // You need to export an object to set up your config
 // Go to https://hardhat.org/config/ to learn more
 
+const API_URL = "https://ropsten.infura.io/v3/ah........sdds7ds0";
+const PRIVATE_KEY = "e8b....................dsdssd384893939939";
 /**
  * @type import('hardhat/config').HardhatUserConfig
  */
