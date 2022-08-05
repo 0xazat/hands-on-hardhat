@@ -5,7 +5,17 @@ describe("BookStore", function () {
   let BookStore, bookStore;
 
   before(async function () {
+    /**
+     * A ContractFactory in ethers.js is an abstraction used to deploy new smart contracts,
+     * so BookStore here is a factory for instances of our bookStore contract.
+     */
     BookStore = await ethers.getContractFactory("BookStore");
+
+    /**
+     * Calling deploy() on a ContractFactory will start the deployment,
+     * and return a Promise that resolves to a Contract.
+     * This is the object that has a method for each of your smart contract functions.
+     */
     bookStore = await BookStore.deploy();
     await bookStore.deployed();
   });
